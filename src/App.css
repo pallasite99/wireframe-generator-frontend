@@ -1,1 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.App {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+form {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.wireframe-output {
+  background: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
 
+.pretty-json {
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
