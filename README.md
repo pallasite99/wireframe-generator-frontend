@@ -28,6 +28,10 @@ wireframe-tool/
               ├── package.json
 ```
 
+## Demo
+
+![image](https://github.com/user-attachments/assets/9af39135-f7a1-44c5-8f6a-a5a5c4ce22ef)
+
 # Getting Started with the app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
