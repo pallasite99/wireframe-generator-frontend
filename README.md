@@ -1,6 +1,33 @@
 # wireframe-generator-frontend
 Frontend framework in ReactJS that aims to develop a drag and drop functionality / AI based auto wireframe generator
 
+## File structure
+
+```
+wireframe-tool/
+              ├── public/
+              │   ├── index.html
+              ├── src/
+              │   ├── components/
+              │   │   ├── DragDropEditor.js
+              │   │   ├── WireframeDisplay.js
+              │   │   ├── ExportButton.js
+              │   ├── pages/
+              │   │   ├── Dashboard.js
+              │   │   ├── Login.js
+              │   │   ├── Register.js
+              │   ├── services/
+              │   │   ├── api.js
+              │   │   ├── auth.js
+              │   ├── App.js
+              │   ├── index.js
+              │   ├── App.css
+              │   ├── styles/
+              │   │   ├── DragDropEditor.css
+              │   │   ├── WireframeDisplay.css
+              ├── package.json
+```
+
 # Getting Started with the app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
