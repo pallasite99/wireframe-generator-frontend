@@ -1,37 +1,120 @@
-body {
-  font-family: Arial, sans-serif;
-}
-.App {
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: center;
-}
-form {
-  margin-bottom: 20px;
-}
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-.wireframe-output {
-  background: #f4f4f4;
-  padding: 20px;
-  border: 1px solid #ccc;
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
 }
 
-.pretty-json {
-  text-align: left;
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.wireframe-preview {
   background-color: #f9f9f9;
-  padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: 'Courier New', Courier, monospace;
-  color: #333;
-  white-space: pre-wrap;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.wireframe-preview pre {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   overflow-x: auto;
 }
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Main App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* JSON Display */
+.json-container {
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Wireframe Preview */
+.wireframe-container {
+  width: 80%;
+  max-width: 800px;
+}
+
+.browser-window {
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 300px; /* Set a minimum height for the preview */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Elements */
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.button {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+

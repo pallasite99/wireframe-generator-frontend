@@ -1,79 +1,36 @@
-// src/App.js
-import React, { useState } from "react";
-import axios from "axios";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import { initialWireframeData } from './utils/mockWireframe'; // Import the mock wireframe data
+import './App.css'; // Import the stylesheet
 
 const App = () => {
-    const [inputData, setInputData] = useState({
-        projectName: "",
-        layoutType: "grid",
-        pages: 1,
-    });
+  const [wireframe, setWireframe] = useState(initialWireframeData.wireframe);
 
-    const [wireframe, setWireframe] = useState(null);
+  useEffect(() => {
+    // You can use mock data to initialize wireframe or load it from an API
+    setWireframe(initialWireframeData.wireframe);
+  }, []);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setInputData({ ...inputData, [name]: value });
-    };
+  return (
+    <div className="App">
+      <h1>Wireframe Tool Demo</h1>
 
-    const generateWireframe = async () => {
-        try {
-            const response = await axios.post("http://localhost:5000/generate", inputData);
-            setWireframe(response.data.wireframe);
-        } catch (err) {
-            console.error(err);
-        }
-    };
+      {/* Wireframe JSON Display */}
+      <div className="json-container">
+        <h2>Initial Wireframe JSON</h2>
+        <pre>{JSON.stringify(wireframe, null, 2)}</pre>
+      </div>
 
-    return (
-        <div className="App">
-            <h1>Wireframe Generator</h1>
-            <form>
-                <label>
-                    Project Name:
-                    <input
-                        type="text"
-                        name="projectName"
-                        value={inputData.projectName}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    Layout Type:
-                    <select
-                        name="layoutType"
-                        value={inputData.layoutType}
-                        onChange={handleChange}
-                    >
-                        <option value="grid">Grid</option>
-                        <option value="list">List</option>
-                    </select>
-                </label>
-                <label>
-                    Number of Pages:
-                    <input
-                        type="number"
-                        name="pages"
-                        value={inputData.pages}
-                        onChange={handleChange}
-                    />
-                </label>
-                <button type="button" onClick={generateWireframe}>
-                    Generate Wireframe
-                </button>
-            </form>
-
-            {wireframe && (
-              <div className="wireframe-output">
-                  <h2>Generated Wireframe</h2>
-                  <pre className="pretty-json">
-                      {JSON.stringify(wireframe, null, 2)}
-                  </pre>
-              </div>
-            )}
+      {/* Wireframe Preview */}
+      <div className="wireframe-container">
+        <h3>Preview:</h3>
+        <div className="browser-window">
+          <header className="header">{wireframe.elements[0].content}</header>
+          <button className="button">{wireframe.elements[1].content}</button>
+          <footer className="footer">{wireframe.elements[2].content}</footer>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default App;
