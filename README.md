@@ -32,6 +32,12 @@ wireframe-tool/
 
 ![image](https://github.com/user-attachments/assets/9af39135-f7a1-44c5-8f6a-a5a5c4ce22ef)
 
+## Future Scope (Sneak Peek)
+
+![image](https://github.com/user-attachments/assets/2fedbb82-95eb-4750-a5ed-a22a1f1a9c40)
+
+![image](https://github.com/user-attachments/assets/fe799673-4384-48cc-a5e6-28853668dc20)
+
 # Getting Started with the app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
